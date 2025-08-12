@@ -1,0 +1,198 @@
+/* Reset & 基本設定 */
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #e0f7fa, #fff);
+    margin: 0;
+    padding: 30px 20px;
+    color: #333;
+}
+
+/* 主標題 */
+h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 2.8rem;
+    color: #00796b;
+    letter-spacing: 2px;
+}
+
+/* 主容器 */
+#container {
+    display: flex;
+    justify-content: center;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+/* 右側遊戲內容 */
+#mainContent {
+    flex: 1;
+    max-width: 700px;
+    background: white;
+    padding: 30px 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 20px rgb(0 0 0 / 0.1);
+    text-align: center;
+}
+
+/* 目前分數區塊 */
+#score {
+    font-weight: 900;
+    font-size: 4.5rem;
+    color: #004d40;
+    background: #b2dfdb;
+    border-radius: 24px;
+    padding: 30px 0;
+    margin-bottom: 25px;
+    box-shadow: 0 8px 15px rgb(0 77 64 / 0.3);
+    user-select: none;
+    transition: color 0.5s;
+}
+
+/* 狀態統計 */
+#stats {
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #00695c;
+    flex-wrap: nowrap;
+}
+#stats span {
+    background: #b2dfdb;
+    padding: 8px 20px;
+    border-radius: 20px;
+    box-shadow: inset 0 0 5px rgb(0 0 0 / 0.1);
+    min-width: 110px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+/* 按鈕 */
+button#drawButton {
+    font-size: 1.6rem;
+    padding: 14px 50px;
+    cursor: pointer;
+    border-radius: 30px;
+    border: none;
+    background-color: #00796b;
+    color: white;
+    font-weight: 700;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 6px 12px rgb(0 121 107 / 0.3);
+    margin-bottom: 12px;
+    user-select: none;
+}
+button#drawButton:hover:not(:disabled) {
+    background-color: #004d40;
+    transform: scale(1.05);
+}
+button#drawButton:active:not(:disabled) {
+    transform: scale(0.95);
+}
+button#drawButton:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* 小標語 */
+.subtitle {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #b71c1c;      /* 紅色 */
+    background-color: #fff176; /* 黃底 */
+    border-radius: 8px;
+    padding: 10px 15px;
+    margin-bottom: 25px;
+    min-height: 40px;
+    user-select: none;
+}
+
+/* 結果區 */
+#result {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: #00796b;
+    min-height: 50px;
+    user-select: none;
+}
+
+/* 歷史紀錄 */
+#history {
+    max-height: 220px;
+    overflow-y: auto;
+    text-align: left;
+    font-size: 1.1rem;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+}
+#history div {
+    margin: 6px 0;
+    padding: 6px 12px;
+    border-radius: 10px;
+    background: #e0f2f1;
+    color: #004d40;
+    user-select: none;
+}
+#history div.negative {
+    color: #b71c1c;
+    background: #ffebee;
+}
+#history div.half {
+    color: #b71c1c;
+    background: #fff9c4;
+}
+
+/* 分數變色動畫 */
+.score.change-positive {
+    color: #2e7d32;
+    transition: color 0.5s;
+}
+.score.change-negative {
+    color: #c62828;
+    transition: color 0.5s;
+}
+
+/* 丟了一半 - 破裂動畫 */
+@keyframes crack {
+    0% { transform: scale(1) rotate(0deg); }
+    20% { transform: scale(1.2) rotate(5deg); }
+    40% { transform: scale(0.8) rotate(-5deg); }
+    60% { transform: scale(1.1) rotate(3deg); }
+    80% { transform: scale(0.9) rotate(-3deg); }
+    100% { transform: scale(1) rotate(0deg); }
+}
+.score.half {
+    animation: crack 0.6s ease;
+}
+
+/* 統計數字跳動 */
+@keyframes bounce {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+}
+.stat.updated {
+    animation: bounce 0.4s ease;
+}
+
+/* 滾動條美化(歷史紀錄區) */
+#history::-webkit-scrollbar {
+    width: 8px;
+}
+#history::-webkit-scrollbar-thumb {
+    background-color: #00796b;
+    border-radius: 20px;
+}
+#history::-webkit-scrollbar-track {
+    background: #b2dfdb;
+    border-radius: 20px;
+}

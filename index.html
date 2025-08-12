@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8" />
+    <title>小毅的懲罰輪盤</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <h1>小毅的懲罰輪盤</h1>
+
+    <div id="container">
+        <!-- 右邊遊戲主區 -->
+        <div id="mainContent" style="max-width: 700px;">
+            <h2>目前分數：</h2>
+            <div id="score" class="score">0</div>
+
+            <div id="stats">
+                <span>大板: <span id="count-daban" class="stat">0</span></span>
+                <span>小板: <span id="count-xiaoban" class="stat">0</span></span>
+                <span>手掌: <span id="count-shouzhang" class="stat">0</span></span>
+                <span>皮帶: <span id="count-pidai" class="stat">0</span></span>
+            </div>
+
+            <button id="drawButton">抽籤</button>
+            <div id="subtitle" class="subtitle"></div>
+
+            <div id="result"></div>
+
+            <h3 style="color:#00796b; margin-top: 30px;">抽籤紀錄</h3>
+            <div id="history"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
