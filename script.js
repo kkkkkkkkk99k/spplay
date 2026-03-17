@@ -1,18 +1,18 @@
 const wheel1Options = [
     { text: "安然無事", prob: 1 },
-    { text: "大板20下", prob: 10 },
-    { text: "大板40下", prob: 7 },
-    { text: "大板60下", prob: 4 },
+    { text: "大板10下", prob: 10 },
+    { text: "大板20下", prob: 7 },
+    { text: "大板30下", prob: 4 },
     { text: "小板20下", prob: 10 },
     { text: "小板40下", prob: 10 },
     { text: "小板60下", prob: 10 },
     { text: "手掌20下", prob: 10 },
     { text: "手掌40下", prob: 8 },
     { text: "手掌60下", prob: 7 },
-    { text: "皮帶20下", prob: 10 },
-    { text: "皮帶40下", prob: 7 },
-    { text: "皮帶60下", prob: 4 },
-    { text: "按摩20下", prob: 1 }
+    { text: "皮帶10下", prob: 10 },
+    { text: "皮帶20下", prob: 7 },
+    { text: "皮帶30下", prob: 4 },
+    { text: "按摩1min", prob: 1 }
 ];
 
 const wheel2Options = [
