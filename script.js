@@ -16,12 +16,12 @@ const wheel1Options = [
 ];
 
 const wheel2Options = [
-    { text: "分數10", prob: 10, score: 5 },
-    { text: "分數20", prob: 15, score: 10 },
-    { text: "分數30", prob: 15, score: 15 },
-    { text: "分數40", prob: 20, score: 20 },
-    { text: "分數50", prob: 15, score: 25 },
-    { text: "分數60", prob: 10, score: 30 },
+    { text: "分數10", prob: 10, score: 10 },
+    { text: "分數20", prob: 15, score: 20 },
+    { text: "分數30", prob: 15, score: 30 },
+    { text: "分數40", prob: 20, score: 40 },
+    { text: "分數50", prob: 15, score: 50 },
+    { text: "分數60", prob: 10, score: 60 },
     { text: "分數-10", prob: 6, score: -10 },
     { text: "分數-15", prob: 4, score: -15 },
     { text: "分數-30", prob: 3, score: -30 },
